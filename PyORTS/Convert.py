@@ -2,9 +2,10 @@ import socket
 import serial
 import threading
 
+port = input("Escribe el puerto serial donde tienes conectado tu arduino: ")
 c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 c.connect(('localhost', 5090))
-s = serial.Serial('COM12', 115200, timeout=0.05)
+s = serial.Serial(port, 115200, timeout=0.05)
 #c.send("register(asfa::pulsador::ilum::*)\nregister(asfa::leds::*)\nregister(asfa::pantalla::iniciar)\nregister(asfa::pantalla::apagar)\nregister(asfa::sonido::iniciar)\nregister(asfa::sonido::detener)\n".encode())
 
 def SerialToTCP():
