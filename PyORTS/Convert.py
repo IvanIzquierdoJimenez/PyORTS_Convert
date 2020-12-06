@@ -2,11 +2,13 @@ import socket
 import serial
 import threading
 
-port = input("Escribe el puerto serial donde tienes conectado tu arduino: ")
+port = input("Escriba el puerto serial donde tienes conectado tu arduino o microcontrolador: ")
 c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 c.connect(('localhost', 5090))
-s = serial.Serial(port, 115200, timeout=0.05)
-#c.send("register(asfa::pulsador::ilum::*)\nregister(asfa::leds::*)\nregister(asfa::pantalla::iniciar)\nregister(asfa::pantalla::apagar)\nregister(asfa::sonido::iniciar)\nregister(asfa::sonido::detener)\n".encode())
+try:
+  s = serial.Serial(port, 115200, timeout=0.05)
+except:
+  print("El Puerto ya esta ocupado, intente otro")
 
 def SerialToTCP():
     while True:
@@ -14,7 +16,7 @@ def SerialToTCP():
         c.sendall(data)
 def TCPToSerial():
     while True:
-        data = c.recv(128,)
+        data = c.recv(128)
         s.write(data)
 
 hilo1 = threading.Thread(target=SerialToTCP)
