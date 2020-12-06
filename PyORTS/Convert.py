@@ -13,7 +13,7 @@ while True:
         if s.isOpen():
             break;
     except:
-        print("El Puerto ya esta ocupado, intente otro")
+        print("El Puerto ya esta ocupado o no existe, porfavor intente otro")
 
 def SerialToTCP():
     while True:
