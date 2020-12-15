@@ -38,10 +38,10 @@ def TCPToSerial():
             s.write(data)
         except:
             return
-hilo1 = threading.Thread(target=SerialToTCP)
-hilo2 = threading.Thread(target=TCPToSerial)
-hilo1.start()
-hilo2.start()
+StT = threading.Thread(target=SerialToTCP)
+TtS = threading.Thread(target=TCPToSerial)
+StT.start()
+TtS.start()
 
 
 
