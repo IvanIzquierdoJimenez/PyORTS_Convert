@@ -1,6 +1,15 @@
 import socket
 import serial
+import serial.tools.list_ports
 import threading
+import os
+
+list = serial.tools.list_ports.comports()
+connected = []
+for element in list:
+    connected.append(element.device)
+print("Puertos disponibles: " + str(connected)[1:-1])
+
 while True:
     port = input("Escriba el puerto serial donde tienes conectado tu arduino o microcontrolador: ")
     try:
