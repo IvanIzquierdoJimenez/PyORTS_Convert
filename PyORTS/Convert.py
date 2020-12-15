@@ -15,12 +15,13 @@ while True:
     try:
         c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         c.connect(('localhost', 5090))
-    except:
-        print("El servidor esta cerrado, compruebe que este conectado e intentelo de nuevo")
-    try:
+        if c.isOpen():
+            break;
         s = serial.Serial(port, 115200, timeout=0.05)
         if s.isOpen():
             break;
+    except socket.error:
+        print("El servidor esta cerrado, compruebe que este conectado e intentelo de nuevo")
     except:
         print("El Puerto ya esta ocupado o no existe, porfavor intente otro")
 
