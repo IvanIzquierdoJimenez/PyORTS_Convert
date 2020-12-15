@@ -1,2 +1,2 @@
 # PyORTS_Convert
-Programa creado para hacer de interfaz entre el server de https://github.com/cesarBLG/liborts y el serial, tanto para arduino para cualquier microcontrolador
+Programa creado para hacer de interfaz entre el server de https://github.com/cesarBLG/liborts y el serial, tanto para arduino como para cualquier microcontrolador
