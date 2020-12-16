@@ -15,8 +15,6 @@ while True:
     try:
         c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         c.connect(('localhost', 5090))
-        if c.isOpen():
-            break;
         s = serial.Serial(port, 115200, timeout=0.05)
         if s.isOpen():
             break;
