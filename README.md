@@ -1,4 +1,5 @@
 # PyORTS_Convert
+<<<<<<< HEAD
 Programa creado para hacer de interfaz entre el server de https://github.com/cesarBLG/liborts y el arduino serial.
 
 Para su correcto funcionamiento necesita instalar en su equipo python 3.8 y pyserial
@@ -9,3 +10,6 @@ Instrucciones:
 2. Abra la consola de comandos
 3. Escriba pip install pyserial
 4. Una vez instalado ya puede ejecutar el archivo
+=======
+Programa creado para hacer de interfaz entre el server de https://github.com/cesarBLG/liborts y el serial, tanto para arduino como para cualquier microcontrolador
+>>>>>>> 7e795ade93808d0d28f04ec003d37065bd3f07ec
