@@ -6,7 +6,7 @@ Para su correcto funcionamiento necesita instalar en su equipo python 3.8 y pyse
 
 Instrucciones:
 
-1. Instalar python 3.8.6: https://www.python.org/downloads/release/python-386/
+1. Instalar python 3.8.6 o version actual: https://www.python.org/downloads/release/python-386/
 2. Abra la consola de comandos
 3. Escriba pip install pyserial
 4. Una vez instalado ya puede ejecutar el archivo
